@@ -72,8 +72,6 @@ Fiberwise is the central management hub for a unified AI ecosystem. It provides 
 ### 💼 Professional Experience
 
 *   **Fiberwise AI** - Creator & Lead Developer *(Current)*
-*   **Snorkle AI** - AI Task Engineer (Contract)
-    *   *Delivered 20+ engineering benchmarks, optimized ML inference gateways (3x speedup), and deployed microservices on Kubernetes.*
 *   **TackleAI** - Sr. Software Engineer
     *   *Engineered LLM-driven data extraction services (90% accuracy) and led SaaS portal development.*
 *   **IncOperate** - Lead Software Engineer & Startup CTO
