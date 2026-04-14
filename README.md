@@ -75,34 +75,17 @@ graph LR
 - Run agent workers on Local, Celery, RabbitMQ, SQS, Redis, or External (webhook) backends. External machines connect and poll for queued activations - distribute agent work across infrastructure without changing agent code.
 - Pluggable execution engine registry - register custom engines to control how activations are executed. The built-in engine runs ia_modules graph pipelines. Custom engines can forward activations to external systems for remote execution, or swap the underlying runtime entirely. More engine types planned.
 
-<table>
-<tr>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/fiberwise/dashboard.png" width="200" alt="Dashboard"><br><sub>Dashboard</sub></summary>
-<img src="screenshots/fiberwise/dashboard.png" alt="Dashboard - full">
-</details>
-</td>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/fiberwise/system-apps.png" width="200" alt="System Apps"><br><sub>System Apps</sub></summary>
-<img src="screenshots/fiberwise/system-apps.png" alt="System Apps - full">
-</details>
-</td>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/fiberwise/models.png" width="200" alt="Models"><br><sub>Models</sub></summary>
-<img src="screenshots/fiberwise/models.png" alt="Models - full">
-</details>
-</td>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/fiberwise/permissions.png" width="200" alt="Permissions"><br><sub>Permissions</sub></summary>
-<img src="screenshots/fiberwise/permissions.png" alt="Permissions - full">
-</details>
-</td>
-</tr>
-</table>
+![Dashboard](screenshots/fiberwise/dashboard.png)
+*Dashboard — workspace landing with Marketplace, System Apps, Settings, and LLM Provider quick links. Per-org profile and identity shown in sidebar.*
+
+![System Apps](screenshots/fiberwise/system-apps.png)
+*System Apps — pre-packaged app catalog with one-click deploy. Each app is versioned and scoped to the current instance.*
+
+![Models](screenshots/fiberwise/models.png)
+*App Models — data model browser with inline item editor, CSV import/export, and multi-model view toggle.*
+
+![Permissions](screenshots/fiberwise/permissions.png)
+*Agent Permissions — per-agent API key permissions with mode, tool, and limit controls. Activation history and status at a glance.*
 
 ## common `Tool` `Agent`
 
@@ -176,34 +159,17 @@ Python framework for building AI agent pipelines with graph-based execution and 
 - Template resolution across pipeline steps - outputs from earlier steps are injected into later step configs automatically, so pipelines compose without manual wiring.
 - Pluggable identity provider adapters - connect to Keycloak, Auth0, or Cognito for agent auth without changing pipeline code.
 
-<table>
-<tr>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/ia_modules/home.png" width="200" alt="Home"><br><sub>Home</sub></summary>
-<img src="screenshots/ia_modules/home.png" alt="Home - full">
-</details>
-</td>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/ia_modules/executions.png" width="200" alt="Executions"><br><sub>Executions</sub></summary>
-<img src="screenshots/ia_modules/executions.png" alt="Executions - full">
-</details>
-</td>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/ia_modules/consensus.png" width="200" alt="Consensus"><br><sub>Consensus</sub></summary>
-<img src="screenshots/ia_modules/consensus.png" alt="Consensus - full">
-</details>
-</td>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/ia_modules/hierarchical.png" width="200" alt="Hierarchical"><br><sub>Hierarchical</sub></summary>
-<img src="screenshots/ia_modules/hierarchical.png" alt="Hierarchical - full">
-</details>
-</td>
-</tr>
-</table>
+![Home](screenshots/ia_modules/home.png)
+*Showcase home — key features at a glance: graph-based pipelines, 12 reliability metrics, EARF pillars, human-in-the-loop, checkpointing, and memory.*
+
+![Executions](screenshots/ia_modules/executions.png)
+*Execution timeline — live pipeline run with Gantt-style step tracking, progress bar, and per-step status (completed, running, pending).*
+
+![Consensus](screenshots/ia_modules/consensus.png)
+*Consensus collaboration — multi-agent voting on a proposal with configurable strategy (majority, supermajority, unanimous, weighted) and iteration limits.*
+
+![Hierarchical](screenshots/ia_modules/hierarchical.png)
+*Hierarchical delegation — leader agent decomposes a task into subtasks, assigns workers, and aggregates results. 8 steps, 3 workers, zero failures.*
 
 ### nexusql `Tool`
 
@@ -222,34 +188,17 @@ Synthetic Document Dataset - end-to-end pipeline from template-based document ge
 - Fine-tuning pipeline supporting 8 VLM configs - SFT and GRPO reinforcement learning with QLoRA adapters. Code complete, waiting on GPU.
 - Four benchmark tracks evaluating OCR and NER accuracy across models. Bootstrap significance tests for statistical rigor. Public benchmark dashboard for reproducible results.
 
-<table>
-<tr>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/synth-doc-gen/dataset.png" width="200" alt="Dataset"><br><sub>Dataset</sub></summary>
-<img src="screenshots/synth-doc-gen/dataset.png" alt="Dataset - full">
-</details>
-</td>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/synth-doc-gen/template.png" width="200" alt="Template"><br><sub>Template</sub></summary>
-<img src="screenshots/synth-doc-gen/template.png" alt="Template - full">
-</details>
-</td>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/synth-doc-gen/graph.png" width="200" alt="Knowledge Graph"><br><sub>Knowledge Graph</sub></summary>
-<img src="screenshots/synth-doc-gen/graph.png" alt="Knowledge Graph - full">
-</details>
-</td>
-<td align="center" width="25%">
-<details>
-<summary><img src="screenshots/synth-doc-gen/annotations.png" width="200" alt="Annotations"><br><sub>Annotations</sub></summary>
-<img src="screenshots/synth-doc-gen/annotations.png" alt="Annotations - full">
-</details>
-</td>
-</tr>
-</table>
+![Dataset](screenshots/synth-doc-gen/dataset.png)
+*Dataset explorer — 4 scale tiers from Nano (45K annotations) to Large (11.4M), with template gallery and NER/OCR result previews.*
+
+![Template](screenshots/synth-doc-gen/template.png)
+*Template inspector — per-document overlay view showing bounding boxes mapped to entity annotations on the rendered PDF.*
+
+![Knowledge Graph](screenshots/synth-doc-gen/graph.png)
+*Knowledge graph — force-directed layout of entity relationships extracted from a single document (85 nodes, 84 edges).*
+
+![Annotations](screenshots/synth-doc-gen/annotations.png)
+*Annotation table — entity-level ground truth with type, value, bounding box coordinates, and page mapping.*
 
 ### GRT `Research`
 
