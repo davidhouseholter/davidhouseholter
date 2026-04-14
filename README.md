@@ -1,7 +1,7 @@
 
 # David Householter
 
-Lead Software Engineer. Creator of [Fiberwise AI](https://github.com/Fiberwise-AI), [MatterWave AI](https://github.com/MatterWave-AI), [MatterCraft](https://mattercraft.tech) and [David Householter Earth](https://davidhouseholter.earth).
+Full Stack Agentic Engineer. Creator of [Fiberwise AI](https://github.com/Fiberwise-AI), [MatterWave AI](https://github.com/MatterWaveAI), [MatterCraft](https://mattercraft.tech) and [David Householter Earth](https://davidhouseholter.earth).
 
 
 <table>
@@ -66,7 +66,7 @@ graph LR
     Worker["Worker"] -->|poll + execute| AP
 ```
 
-## core-web `Platform` `Agent`
+## core-web `Platform` `Agent` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/Fiberwise-AI/core-web)
 
 - Activate agents four ways from the same platform: config-only LLM agents (no code), Python class agents, graph pipelines, and A2A delegation to external CLI agents - the platform dispatches all four through a single activation path.
 - Every activation runs with its own isolated service context - LLM provider, database, OAuth tokens, and SDK are injected automatically. The platform records cost, duration, and metrics per activation with NDJSON logging.
@@ -87,7 +87,7 @@ graph LR
 ![Permissions](screenshots/fiberwise/permissions.png)
 *Agent Permissions — per-agent API key permissions with mode, tool, and limit controls. Activation history and status at a glance.*
 
-## common `Tool` `Agent`
+## common `Tool` `Agent` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/Fiberwise-AI/common) [![PyPI](https://img.shields.io/pypi/v/fiberwise-common?logo=pypi&logoColor=white)](https://pypi.org/project/fiberwise-common/)
 
 Shared library that every Fiberwise component depends on. Provides the agent base class, service registry, and database abstraction.
 
@@ -97,7 +97,7 @@ Shared library that every Fiberwise component depends on. Provides the agent bas
 - Database abstraction via NexusQL - write queries in PostgreSQL syntax and they run on SQLite, MySQL, or MSSQL without changes. The platform handles dialect translation.
 - Install agents, pipelines, workflows, and functions from a single manifest - the platform detects what each entity is, validates it, and registers it.
 
-## CLI `Tool`
+## CLI `Tool` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/Fiberwise-AI/cli) [![PyPI](https://img.shields.io/pypi/v/fiberwise?logo=pypi&logoColor=white)](https://pypi.org/project/fiberwise/)
 
 Command-line tool for building, deploying, and running Fiberwise apps locally or against remote instances.
 
@@ -110,7 +110,7 @@ Command-line tool for building, deploying, and running Fiberwise apps locally or
 - Start a background worker that processes queued agent activations, with configurable concurrency and timeout.
 - OAuth providers declared in your manifest are auto-detected and registered on deploy.
 
-## SDK (Node.js) `Tool`
+## SDK (Node.js) `Tool` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/Fiberwise-AI/sdk-node) [![npm](https://img.shields.io/npm/v/@fiberwise/sdk?logo=npm&logoColor=white)](https://www.npmjs.com/package/@fiberwise/sdk)
 
 Client library for building browser and server-side apps on the Fiberwise platform.
 
@@ -120,7 +120,7 @@ Client library for building browser and server-side apps on the Fiberwise platfo
 - WebSocket connection with automatic reconnection and message queueing - if the connection drops, messages buffer and send when it recovers.
 - Query activation history with filters (status, agent, context) and pagination.
 
-## SDK (Python) `Tool`
+## SDK (Python) `Tool` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/Fiberwise-AI/sdk-python) [![PyPI](https://img.shields.io/pypi/v/fiberwise-sdk?logo=pypi&logoColor=white)](https://pypi.org/project/fiberwise-sdk/)
 
 Client library for Python apps and scripts that interact with the Fiberwise platform.
 
@@ -132,7 +132,7 @@ Client library for Python apps and scripts that interact with the Fiberwise plat
 - Configure LLM providers at runtime - add OpenAI, Anthropic, Google, local models, or mocks, set defaults, and switch between them without redeploying.
 - Package and deploy AI models as Fiberwise apps - wrap an LLM, embedding model, or image model into a versioned manifest and deploy it.
 
-## fiber-apps `Platform`
+## fiber-apps `Platform` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/Fiberwise-AI/fiber-apps)
 
 Reference apps that ship with the platform, demonstrating how to build on Fiberwise.
 
@@ -148,7 +148,7 @@ Reference apps that ship with the platform, demonstrating how to build on Fiberw
 
 Foundation model research lab - building models, agents, tools, and datasets that advance the frontier of AI.
 
-### ia_modules `Tool` `Agent`
+### ia_modules `Tool` `Agent` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/MatterWaveAI/ia_modules) [![PyPI](https://img.shields.io/pypi/v/ia-modules?logo=pypi&logoColor=white)](https://pypi.org/project/ia-modules/)
 
 Python framework for building AI agent pipelines with graph-based execution and multi-agent coordination.
 
@@ -171,7 +171,7 @@ Python framework for building AI agent pipelines with graph-based execution and 
 ![Hierarchical](screenshots/ia_modules/hierarchical.png)
 *Hierarchical delegation — leader agent decomposes a task into subtasks, assigns workers, and aggregates results. 8 steps, 3 workers, zero failures.*
 
-### nexusql `Tool`
+### nexusql `Tool` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/MatterWaveAI/nexusql) [![PyPI](https://img.shields.io/pypi/v/nexusql?logo=pypi&logoColor=white)](https://pypi.org/project/nexusql/)
 
 Universal data access layer - write SQL once and run it on SQLite, PostgreSQL, MySQL, or MSSQL.
 
@@ -179,7 +179,7 @@ Universal data access layer - write SQL once and run it on SQLite, PostgreSQL, M
 - Parameter syntax (:param_name) is auto-translated per dialect - write one parameterized query and it works across all four databases.
 - Migration runner that tracks schema versions - write migrations in PostgreSQL and they apply correctly on any supported database.
 
-### SDD `Research` `ML Pipeline`
+### SDD `Research` `ML Pipeline` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/MatterWaveAI/sdd) [![Benchmark](https://img.shields.io/badge/-Benchmark_Site-4285F4?logo=googlechrome&logoColor=white)](https://davidhouseholter.github.io/sdd-benchmark-site/)
 
 Synthetic Document Dataset - end-to-end pipeline from template-based document generation through fine-tuning to public benchmark evaluation.
 
@@ -200,7 +200,7 @@ Synthetic Document Dataset - end-to-end pipeline from template-based document ge
 ![Annotations](screenshots/synth-doc-gen/annotations.png)
 *Annotation table — entity-level ground truth with type, value, bounding box coordinates, and page mapping.*
 
-### GRT `Research`
+### GRT `Research` [![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)](https://github.com/MatterWaveAI/grt)
 
 Geometric Rotation Transformer - a novel transformer architecture where all weights are learned Givens rotations on SO(n), replacing standard linear layers entirely.
 
